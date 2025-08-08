@@ -6,15 +6,11 @@
   background-color: var(--color-background);
 }
 
-:root {
-  --color-background: #ffffff;
-  --color-light-gray-100: #dce3ee;
-  --color-light-gray-200: #f4f6fa;
-  --color-white-variant-1: #fdfdfd;
-  --color-white-variant-2: #fefefe;
-  --color-light-gray-300: #dae2ed;
-  --color-primary-blue: #496ef3;
-  --color-light-gray-400: #fbfcfd;
-  --color-light-gray-500: #dbe3ee;
-  --color-light-gray-600: #dbe2ed;
+@theme {
+
+  --color-primary-blue: #2053f4;
+  --color-primary-blue-1: rgb(30 84 244);
+  --color-primary-black: #0b1826;
+  --color-input-bg: #f3f5f9;
+  --color-gray-1: #cecece;
 }
