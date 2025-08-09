@@ -8,8 +8,9 @@ const ExpenstListing = lazy(() => import("../pages/ExpenseListing"))
 const AppRoutes = () => {
     const location = useLocation();
     const isLogged = localStorage.getItem("userInfo") !== null;
+    const withBottomBar = location.pathname === '/' || location.pathname === '/not-found'
     return (
-        <Mainlayout>
+        <Mainlayout withBottomBar={withBottomBar}>
                 <Routes location={location} key={location.pathname}>
                     {isLogged ? (
                     <>
