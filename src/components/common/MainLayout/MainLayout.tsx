@@ -1,12 +1,14 @@
-import { type ReactNode } from 'react';
+import NavigationBar from '../../ExpensListing/NavigationBar';
+import type { IMainlayoutProps } from '../../../types/types';
 
-type Props = {
-    children: ReactNode;
-};
-
-const Mainlayout = ({children}: Props) => {
+const Mainlayout = ({children , withBottomBar}: IMainlayoutProps) => {
     return (
-        <div className='md:shadow max-w-full md:max-w-1/2 mx-auto md:rounded-xl p-4 mt-4'>{children}</div>
+        <div className={`${withBottomBar && 'bg-gradient-to-b from-[#f3f5f9] to-white'} h-full relative md:shadow max-w-full md:max-w-1/2 mx-auto md:rounded-xl md:my-4`}>
+            {children}
+            {withBottomBar && (
+                <NavigationBar />
+            )}
+        </div>
     )
 }
 

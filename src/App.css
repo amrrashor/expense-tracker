@@ -3,14 +3,41 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  background-color: var(--color-background);
+  background-color: var(--color-white);
+  height: 100vh;
 }
 
 @theme {
 
   --color-primary-blue: #2053f4;
-  --color-primary-blue-1: rgb(30 84 244);
+  --color-primary-blue-1: #1E54F4;
+  --color-primary-blue-2: #496ef3;
   --color-primary-black: #0b1826;
   --color-input-bg: #f3f5f9;
   --color-gray-1: #cecece;
+}
+
+.no-scrollbar {
+  /* For Firefox */
+  scrollbar-width: none;
+  /* For IE and Edge */
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.header-bg {
+  background-image: url('./assets/oscillate.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode:luminosity;
+}
+
+.card-bg {
+  background-image: url('./assets/llline-10.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode:luminosity;
 }

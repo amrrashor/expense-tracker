@@ -20,7 +20,7 @@ const Login = () => {
                 animate={ANIMATE_TRANSITION}
                 exit={EXIT_TRANSITION}
                 transition={{ duration: 0.3 }}
-                className="px-5"
+                className="p-9"
             >
                 <div className="my-10">
                     <h1 className="text-4xl text-primary-blue font-bold text-center">Expenset.</h1>
