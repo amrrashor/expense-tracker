@@ -11,6 +11,6 @@ export const ANIMATE_TRANSITION = {
 
 export const EXIT_TRANSITION = {
     opacity: 0, 
-    y: 20 
+    y: 20,
 };
 

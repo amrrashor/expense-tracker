@@ -11,7 +11,7 @@ const LoginOptions = () => {
 
             <div className='mb-5'>
                 <Button className='border-input-bg border text-center w-full  p-6 text-lg rounded-lg'>
-                    <img src='/src/assets/Apple.svg' alt='apple logo' className='w-4' /> continue with Apple
+                    <img src='/src/assets/Apple_logo_black.svg' alt='apple logo' className='w-4' /> continue with Apple
                 </Button>
             </div>
 

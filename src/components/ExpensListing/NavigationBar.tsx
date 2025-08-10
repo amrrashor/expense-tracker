@@ -3,7 +3,7 @@ import { NavLink } from 'react-router'
 
 const NavigationBar = () => {
     return (
-        <div className='fixed md:absolute bottom-0 bg-re-50 p-6 w-full md:shadow md:rounded-bl-lg md:rounded-br-lg bg-white'>
+        <div className='fixed md:absolute bottom-0 mt-10 bg-re-50 p-6 w-full md:shadow md:rounded-bl-lg md:rounded-br-lg bg-white'>
             <div className='flex justify-between items-center'>
                 <NavLink to={'/'}>
                     {({isActive}) => (
