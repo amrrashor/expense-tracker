@@ -1,4 +1,4 @@
-import { Popcorn, ShoppingCart, Fuel, Handbag, Newspaper, Car, HandCoins } from "lucide-react";
+import { Popcorn, ShoppingCart, Fuel, Handbag, Newspaper, Car, HandCoins, Plus } from "lucide-react";
 import type { ICategoryList } from "../../types/types";
 
 const categoryList = [
@@ -32,6 +32,14 @@ const CategoryList = ({selectedCategory, setSelectedCategory}: ICategoryList) =>
                     <span className={`${selectedCategory === name.toLocaleLowerCase() ? 'text-primary-blue' : 'text-primary-black'} font-medium text-sm mt-2`}>{name}</span>
                 </div>
             ))}
+            <div>
+                <div className="flex flex-col justify-center items-center cursor-pointer">
+                    <div className="w-10 h-10 border border-primary-blue rounded-full flex justify-center items-center">
+                        <Plus className="w-5 h-5 text-primary-blue" />
+                    </div>
+                    <span className='font-medium text-sm mt-2 text-nowrap'>Add Category</span>
+                </div>
+            </div>
         </div>
     );
 };

@@ -67,6 +67,43 @@ Expense-Tracker/
 └── vitest.config.ts       # Testing configuration
 ```
 
+## 🧱 Architecture & Structure
+
+- **App type**: Single Page Application built with React and Vite
+- **Routing**: Client-side routing with protected routes in `src/routes/AppRoutes.tsx`. Auth state is derived from `localStorage` key `userInfo` and unauthenticated users are redirected to `Login`.
+- **State & persistence**:
+  - UI state managed with React hooks
+  - Expenses and auth data are stored in `localStorage` (`expenses`, `userInfo`)
+- **Pages**:
+  - `Login` for authentication
+  - `ExpenseListing` for filtering, listing, and paginating expenses
+  - `AddExpense` for creating new expenses
+- **Components**: Feature-first folders under `src/components`, with shared UI primitives under `src/components/common/ui`.
+
+## 🔌 API Integration
+
+This version is fully client-side and does not call external APIs. Data is persisted in the browser using `localStorage`.
+
+If a backend is introduced later, the planned approach is:
+- Use native `fetch` wrapped by a small request utility for consistent headers and error handling
+- Configure base URL and secrets via environment variables
+- Map server errors to user-friendly toasts and support optimistic updates on create/delete
+
+## 📄 Pagination Strategy
+
+- **Type**: Local (client-side) pagination
+- **Mechanism**: The list renders a slice of filtered results based on a `visibleCount`. A “Load More” action increments `visibleCount` by a fixed page size (10)
+- **Reset**: Changing filters resets `visibleCount` to the first page
+- **Why local**: All data resides in the browser; server-driven pagination will be added alongside API integration using query params like `?page` and `?limit`.
+
+## 🖼️ UI Screenshots
+
+Add real screenshots under `docs/screenshots/` and update the links below:
+
+![Login](public/login.png)
+![Expense Listing](public/expense_list.png)
+![Add Expense](public/add_expense.png)
+
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
@@ -106,6 +143,12 @@ Expense-Tracker/
 - `pnpm test` - Run tests
 - `pnpm lint` - Run ESLint
 
+## ▶️ How to Run the Project
+
+1. Install dependencies: `npm install`
+2. Start the dev server: `npm dev`
+3. Open `http://localhost:5173`
+
 ## 🎯 Usage
 
 ### Authentication
@@ -134,6 +177,12 @@ The application includes 7 predefined expense categories:
 - News
 - Transport
 - Rent
+
+## 🐞 Known Bugs / Unimplemented Features
+
+- No backend API integration yet; all data is local to the browser
+- Login is demo-only; there is no real authentication/authorization
+- Limited test coverage beyond layout and smoke tests
 
 ## 🔧 Configuration
 
